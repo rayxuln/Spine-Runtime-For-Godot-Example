@@ -4,6 +4,11 @@ func _ready():
 	$SpineSprite.get_animation_state().set_animation("idle")
 	$SpineSprite.get_animation_state().set_empty_animation(2, 0.5)
 	$SpineSprite.get_animation_state().set_empty_animation(3, 0.5)
+	
+	var anims = $SpineSprite.animation_state_data_res.skeleton.get_animations()
+	for a in anims:
+		a = a as SpineAnimation
+		print(a.get_anim_name())
 
 func _process(delta):
 	if Input.is_action_just_pressed("click"):
@@ -41,5 +46,5 @@ func _unhandled_input(event):
 
 func _on_SpineSprite_animation_complete(animation_state, track_entry, event):
 	track_entry = track_entry as SpineTrackEntry
-	if track_entry.get_animation().get_anim_name() == "blink":
-		animation_state.clear_track(1)
+#	if track_entry.get_animation().get_anim_name() == "blink":
+#		animation_state.clear_track(1)
