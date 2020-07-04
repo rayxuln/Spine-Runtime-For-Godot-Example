@@ -153,13 +153,12 @@ script = ExtResource( 3 )
 scale = Vector2( 0.3, 0.3 )
 animation_state_data_res = SubResource( 2 )
 select_track_id = 1
-current_animations = [ "portal" ]
+current_animations = [ "", "aim" ]
 bind_slot_nodes = [ [ "gun", NodePath("Gun") ] ]
 
 [node name="Gun" type="Node2D" parent="SpineBoy/SpineSprite"]
-position = Vector2( 56.7366, -361.836 )
-rotation = -0.537615
-scale = Vector2( 1, 1 )
+position = Vector2( 53.6106, -363.15 )
+rotation = -0.5285
 
 [node name="icon" type="Sprite" parent="SpineBoy/SpineSprite/Gun"]
 position = Vector2( -2.12381, -9.20477 )

@@ -29,6 +29,9 @@ func _process(delta):
 	
 	if Input.is_action_just_pressed("jump"):
 		play_jump_animation()
+		
+	if Input.is_action_just_pressed("ui_accept"):
+		queue_free()
 	
 
 func _physics_process(delta):
