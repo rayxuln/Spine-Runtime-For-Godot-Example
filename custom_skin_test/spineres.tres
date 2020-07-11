@@ -1,0 +1,11 @@
+[gd_resource type="SpineAnimationStateDataResource" load_steps=4 format=2]
+
+[ext_resource path="res://assets/Character/Player/mix-and-match.atlas" type="SpineAtlasResource" id=1]
+[ext_resource path="res://assets/Character/Player/mix-and-match-pro.json" type="SpineSkeletonJsonDataResource" id=2]
+
+[sub_resource type="SpineSkeletonDataResource" id=1]
+atlas_res = ExtResource( 1 )
+skeleton_json_res = ExtResource( 2 )
+
+[resource]
+skeleton = SubResource( 1 )

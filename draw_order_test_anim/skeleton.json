@@ -1,0 +1,46 @@
+{
+"skeleton": {
+	"hash": "h2sccqjCwr0IcIuUQDf1xNWh8Y8",
+	"spine": "3.8.96",
+	"x": -897.19,
+	"y": -348.64,
+	"width": 2329.87,
+	"height": 1031,
+	"images": "C:/Users/Raiix/Pictures",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "godot", "bone": "root", "attachment": "godot" },
+	{ "name": "1200px-Godot_logo.svg", "bone": "root", "attachment": "1200px-Godot_logo.svg" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"1200px-Godot_logo.svg": {
+				"1200px-Godot_logo.svg": { "x": 832.68, "y": 439.86, "width": 1200, "height": 485 }
+			},
+			"godot": {
+				"godot": { "x": -97.19, "y": 101.36, "width": 1600, "height": 900 }
+			}
+		}
+	}
+],
+"animations": {
+	"swap_draw_order": {
+		"drawOrder": [
+			{},
+			{
+				"time": 0.1667,
+				"offsets": [
+					{ "slot": "godot", "offset": 1 }
+				]
+			},
+			{ "time": 0.3333 }
+		]
+	}
+}
+}
