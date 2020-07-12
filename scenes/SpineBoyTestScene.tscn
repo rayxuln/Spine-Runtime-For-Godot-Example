@@ -155,23 +155,44 @@ scale = Vector2( 0.3, 0.3 )
 animation_state_data_res = SubResource( 2 )
 select_track_id = 1
 current_animations = [ "", "aim" ]
-bind_slot_nodes = [ [ "gun", NodePath("Gun") ] ]
+bind_slot_nodes = [ [ "gun", NodePath("Gun") ], [ "head", NodePath("Gun2") ] ]
 
 [node name="Gun" type="Node2D" parent="SpineBoy/SpineSprite"]
-position = Vector2( 54.4335, -373.945 )
-rotation = -0.503988
+position = Vector2( 57.3032, -365.731 )
+rotation = -0.529542
 
 [node name="icon" type="Sprite" parent="SpineBoy/SpineSprite/Gun"]
-position = Vector2( -2.12381, -9.20477 )
+position = Vector2( 14.9969, 12.1031 )
+rotation = 0.195033
 scale = Vector2( 0.69584, 1.33457 )
 texture = ExtResource( 4 )
 
 [node name="icon3" type="Sprite" parent="SpineBoy/SpineSprite/Gun"]
-position = Vector2( 18.0099, -83.9008 )
+position = Vector2( 133.547, -69.1401 )
 scale = Vector2( 0.163572, 0.300444 )
 texture = ExtResource( 4 )
 
 [node name="icon2" type="Sprite" parent="SpineBoy/SpineSprite/Gun"]
+position = Vector2( 88.661, -39.1952 )
+scale = Vector2( 2.88575, 0.878335 )
+texture = ExtResource( 4 )
+
+[node name="Gun2" type="Node2D" parent="SpineBoy/SpineSprite"]
+position = Vector2( -30.1039, -369.995 )
+rotation = -2.11426
+scale = Vector2( 1, 1 )
+
+[node name="icon" type="Sprite" parent="SpineBoy/SpineSprite/Gun2"]
+position = Vector2( 132.059, -112.93 )
+scale = Vector2( 0.69584, 1.33457 )
+texture = ExtResource( 4 )
+
+[node name="icon3" type="Sprite" parent="SpineBoy/SpineSprite/Gun2"]
+position = Vector2( 18.0099, -83.9008 )
+scale = Vector2( 0.163572, 0.300444 )
+texture = ExtResource( 4 )
+
+[node name="icon2" type="Sprite" parent="SpineBoy/SpineSprite/Gun2"]
 position = Vector2( 68.5323, -50.8756 )
 scale = Vector2( 2.88575, 0.878335 )
 texture = ExtResource( 4 )
