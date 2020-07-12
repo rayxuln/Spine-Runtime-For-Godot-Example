@@ -10,7 +10,9 @@ func _ready() -> void:
 	#test1()
 	#test2()
 	#test3()
-	test4()
+	#test4()
+	test5()
+	pass
 		
 func test1() -> void:
 	# expect to see brown hair. see brown hair
@@ -41,3 +43,11 @@ func test4() -> void:
 	custom_skin.add_skin(hair)
 	spine_sprite.get_skeleton().set_skin(custom_skin)
 	spine_sprite.get_skeleton().set_to_setup_pose()
+
+func test5() -> void:
+	var hair: SpineSkin = spine_sprite.get_skeleton().get_data().find_skin("hair/brown")
+	var at = hair.get_attachments()
+	while at.has_next():
+		var at1 = at.next()
+		print(at1.get_attachment().get_attachment_name())
+	spine_sprite.get_skeleton().set_skin(hair)
