@@ -1,21 +1,21 @@
 [gd_scene load_steps=25 format=2]
 
-[ext_resource path="res://spine_boy/spineboy-pro.json" type="SpineSkeletonJsonDataResource" id=1]
-[ext_resource path="res://spine_boy/spineboy-pro.atlas" type="SpineAtlasResource" id=2]
+[ext_resource path="res://spine_boy_test1/spineboy-pro.json" type="SpineSkeletonJsonDataResource" id=1]
+[ext_resource path="res://spine_boy_test1/spineboy-pro.atlas" type="SpineAtlasResource" id=2]
 [ext_resource path="res://scenes/SpineBoy.gd" type="Script" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 
-[sub_resource type="SpineSkeletonDataResource" id=1]
+[sub_resource type="SpineSkeletonDataResource" id=20]
 atlas_res = ExtResource( 2 )
 skeleton_json_res = ExtResource( 1 )
 animation_names = [ "aim", "death", "hoverboard", "idle", "idle-turn", "jump", "portal", "run", "run-to-idle", "shoot", "walk" ]
 skin_names = [ "default" ]
 
-[sub_resource type="SpineAnimationStateDataResource" id=2]
-skeleton = SubResource( 1 )
+[sub_resource type="SpineAnimationStateDataResource" id=21]
+skeleton = SubResource( 20 )
 default_mix = 0.2
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=22]
 resource_name = "aim"
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpineSprite:current_animations")
@@ -30,7 +30,7 @@ tracks/0/keys = {
 "values": [ [ "", "aim" ] ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=23]
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpineSprite:current_animations")
 tracks/0/interp = 1
@@ -44,10 +44,10 @@ tracks/0/keys = {
 "values": [ [ "idle" ] ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=24]
 resource_name = "jump"
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=25]
 resource_name = "not_aim"
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpineSprite:select_track_id")
@@ -74,7 +74,7 @@ tracks/1/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=26]
 resource_name = "portal"
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpineSprite:current_animations")
@@ -89,7 +89,7 @@ tracks/0/keys = {
 "values": [ [ "portal" ] ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=27]
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpineSprite:current_animations")
 tracks/0/interp = 1
@@ -103,26 +103,26 @@ tracks/0/keys = {
 "values": [ [ "run" ] ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=9]
+[sub_resource type="AnimationNodeAnimation" id=28]
 animation = "idle"
 
-[sub_resource type="AnimationNodeAnimation" id=10]
+[sub_resource type="AnimationNodeAnimation" id=29]
 animation = "run"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
 
-[sub_resource type="AnimationNodeStateMachine" id=13]
-states/idle/node = SubResource( 9 )
+[sub_resource type="AnimationNodeStateMachine" id=32]
+states/idle/node = SubResource( 28 )
 states/idle/position = Vector2( 263, 76 )
-states/run/node = SubResource( 10 )
+states/run/node = SubResource( 29 )
 states/run/position = Vector2( 560, 76 )
-transitions = [ "idle", "run", SubResource( 11 ), "run", "idle", SubResource( 12 ) ]
+transitions = [ "idle", "run", SubResource( 30 ), "run", "idle", SubResource( 31 ) ]
 start_node = "idle"
 graph_offset = Vector2( -78, -67 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=14]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=33]
 
 [sub_resource type="AnimationNodeAnimation" id=15]
 animation = "aim"
@@ -142,7 +142,7 @@ states/not_aim/position = Vector2( 453, 90 )
 transitions = [ "aim", "not_aim", SubResource( 17 ), "not_aim", "aim", SubResource( 18 ) ]
 start_node = "aim"
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=20]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=34]
 
 [node name="Node2D" type="Node2D"]
 
@@ -152,14 +152,14 @@ script = ExtResource( 3 )
 
 [node name="SpineSprite" type="SpineSprite" parent="SpineBoy"]
 scale = Vector2( 0.3, 0.3 )
-animation_state_data_res = SubResource( 2 )
+animation_state_data_res = SubResource( 21 )
 select_track_id = 1
 current_animations = [ "", "aim" ]
 bind_slot_nodes = [ [ "gun", NodePath("Gun") ], [ "head", NodePath("Gun2") ] ]
 
 [node name="Gun" type="Node2D" parent="SpineBoy/SpineSprite"]
-position = Vector2( 57.3032, -365.731 )
-rotation = -0.529542
+position = Vector2( 55.4672, -371.651 )
+rotation = -0.511615
 
 [node name="icon" type="Sprite" parent="SpineBoy/SpineSprite/Gun"]
 position = Vector2( 14.9969, 12.1031 )
@@ -178,8 +178,8 @@ scale = Vector2( 2.88575, 0.878335 )
 texture = ExtResource( 4 )
 
 [node name="Gun2" type="Node2D" parent="SpineBoy/SpineSprite"]
-position = Vector2( -30.1039, -369.995 )
-rotation = -2.11426
+position = Vector2( -33.3977, -376.668 )
+rotation = -2.089
 scale = Vector2( 1, 1 )
 
 [node name="icon" type="Sprite" parent="SpineBoy/SpineSprite/Gun2"]
@@ -198,22 +198,22 @@ scale = Vector2( 2.88575, 0.878335 )
 texture = ExtResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SpineBoy"]
-anims/aim = SubResource( 3 )
-anims/idle = SubResource( 4 )
-anims/jump = SubResource( 5 )
-anims/not_aim = SubResource( 6 )
-anims/portal = SubResource( 7 )
-anims/run = SubResource( 8 )
+anims/aim = SubResource( 22 )
+anims/idle = SubResource( 23 )
+anims/jump = SubResource( 24 )
+anims/not_aim = SubResource( 25 )
+anims/portal = SubResource( 26 )
+anims/run = SubResource( 27 )
 
 [node name="AnimationTree" type="AnimationTree" parent="SpineBoy"]
-tree_root = SubResource( 13 )
+tree_root = SubResource( 32 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 14 )
+parameters/playback = SubResource( 33 )
 
 [node name="AnimationTree2" type="AnimationTree" parent="SpineBoy"]
 tree_root = SubResource( 19 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 20 )
+parameters/playback = SubResource( 34 )
 [connection signal="animation_complete" from="SpineBoy/SpineSprite" to="SpineBoy" method="_on_SpineSprite_animation_complete"]
