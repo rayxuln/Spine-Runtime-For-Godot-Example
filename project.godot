@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Spine Run Time Test Project"
-run/main_scene="res://ClippingAnimationTest/ClippingAnimationTest.tscn"
+run/main_scene="res://spine4.0/test_scenes/Test1.tscn"
 config/icon="res://icon.png"
 
 [input]
