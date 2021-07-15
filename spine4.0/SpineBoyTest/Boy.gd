@@ -36,6 +36,8 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide(input_vec * 150)
 
+func print_a1():
+	print('eeee')
 #----- Methods -----
 func reset_skeleton():
 	$SpineSprite.get_skeleton().set_bones_to_setup_pose()
@@ -43,16 +45,17 @@ func reset_skeleton():
 
 
 func _on_SpineSprite_animation_end(animation_state: Object, track_entry: SpineTrackEntry, event: SpineEvent) -> void:
-	print('anim %s end' % track_entry.get_animation().get_anim_name())
+#	print('anim %s end' % track_entry.get_animation().get_anim_name())
 	if track_entry.get_animation().get_anim_name() == 'jump':
 		jumping = false
 
 
 func _on_SpineSprite_animation_start(animation_state: Object, track_entry: SpineTrackEntry, event: Object) -> void:
-	print('anim %s start' % track_entry.get_animation().get_anim_name())
+#	print('anim %s start' % track_entry.get_animation().get_anim_name())
+	pass
 
 
 func _on_SpineSprite_animation_complete(animation_state: Object, track_entry: SpineTrackEntry, event: Object) -> void:
-	print('anim %s complete' % track_entry.get_animation().get_anim_name())
+#	print('anim %s complete' % track_entry.get_animation().get_anim_name())
 	if track_entry.get_animation().get_anim_name() == 'jump':
 		jumping = false

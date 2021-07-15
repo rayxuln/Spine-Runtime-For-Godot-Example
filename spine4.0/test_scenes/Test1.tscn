@@ -61,7 +61,7 @@ physics_material_override = SubResource( 3 )
 [node name="SpineCollisionShapeProxy" type="SpineCollisionShapeProxy" parent="Area2D"]
 position = Vector2( 846.697, 547.664 )
 scale = Vector2( 0.5, 0.5 )
-polygon = PoolVector2Array( -7.75463, -707.658, -144.657, -496.181, -79.657, -374.731, -82.4845, -222.788, -173.381, -28.1422, -56.9128, 54.1097, 153.75, 33.9258, 210.482, -149.395, 189.727, -663.035 )
+polygon = PoolVector2Array( -89.3737, -695.356, -180.436, -491.707, -79.657, -374.731, -82.4845, -222.788, -130.893, -20.3173, -56.9128, 54.1097, 153.75, 33.9258, 298.81, -160.579, 115.933, -679.803 )
 spine_sprite_path = NodePath("../SpineSprite3")
 slot = "root_bouding"
 
