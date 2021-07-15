@@ -11,4 +11,4 @@ dest_files=[ "res://.import/spineboy-pro.atlas-5a797d7c7f7daeb740faf702ffe4b4c0.
 
 [params]
 
-normal_texture_prefix="s"
+normal_texture_prefix="n"

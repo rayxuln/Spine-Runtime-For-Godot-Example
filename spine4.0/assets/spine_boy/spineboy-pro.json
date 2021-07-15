@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "IQgkYFQG8ng",
+	"hash": "7yiHzAMEcaA",
 	"spine": "4.0.04",
 	"x": -188.63,
 	"y": -7.94,
@@ -300,7 +300,8 @@
 	{ "name": "muzzle-ring", "bone": "muzzle-ring", "color": "d8baffff", "blend": "additive" },
 	{ "name": "muzzle-ring2", "bone": "muzzle-ring2", "color": "d8baffff", "blend": "additive" },
 	{ "name": "muzzle-ring3", "bone": "muzzle-ring3", "color": "d8baffff", "blend": "additive" },
-	{ "name": "muzzle-ring4", "bone": "muzzle-ring4", "color": "d8baffff", "blend": "additive" }
+	{ "name": "muzzle-ring4", "bone": "muzzle-ring4", "color": "d8baffff", "blend": "additive" },
+	{ "name": "root_bouding", "bone": "root", "attachment": "root_bouding" }
 ],
 "ik": [
 	{
@@ -790,6 +791,13 @@
 			},
 			"rear-upper-arm": {
 				"rear-upper-arm": { "x": 21.13, "y": 4.09, "rotation": 89.33, "width": 40, "height": 87 }
+			},
+			"root_bouding": {
+				"root_bouding": {
+					"type": "boundingbox",
+					"vertexCount": 9,
+					"vertices": [ -124.5, 690.08, -195.67, 489.92, -79.33, 374.8, -82.29, 222.86, -112.28, 16.99, -56.96, -54.06, 153.72, -34.06, 279.78, 194.16, 84.23, 687.07 ]
+				}
 			},
 			"side-glow1": {
 				"hoverglow-small": { "x": 2.09, "scaleX": 0.2353, "scaleY": 0.4132, "width": 274, "height": 75 }
@@ -8690,8 +8698,28 @@
 				{ "time": 1, "softness": 5, "bendPositive": false }
 			]
 		},
+		"deform": {
+			"default": {
+				"root_bouding": {
+					"root_bouding": [
+						{
+							"offset": 14,
+							"vertices": [ 57.83923, -28.97975 ]
+						},
+						{
+							"time": 0.5,
+							"vertices": [ 140.81831, 21.09925, 61.72736, 7.6636, 0, 0, 0, 0, -73.2823, 13.56253, 0, 0, 0, 0, -94.55013, -48.1405, 127.2752, -29.03772 ]
+						},
+						{
+							"time": 1,
+							"offset": 14,
+							"vertices": [ 57.83923, -28.97975 ]
+						}
+					]
+				}
+			}
+		},
 		"events": [
-			{ "name": "footstep" },
 			{ "time": 0.5, "name": "footstep" }
 		]
 	}

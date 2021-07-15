@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/n_spineboy-pro.png-90e21cf5afc0ba65f43e13390ce0b934.stex"
+path="res://.import/icon.svg-180b05902c8c0faa2150d9a68978c8ea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spine4.0/assets/spine_boy/n_spineboy-pro.png"
-dest_files=[ "res://.import/n_spineboy-pro.png-90e21cf5afc0ba65f43e13390ce0b934.stex" ]
+source_file="res://addons/naive_behavior_tree/icon.svg"
+dest_files=[ "res://.import/icon.svg-180b05902c8c0faa2150d9a68978c8ea.stex" ]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

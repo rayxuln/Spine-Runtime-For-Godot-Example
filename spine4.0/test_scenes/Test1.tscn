@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://spine4.0/assets/spine_boy/spineboy-pro.json" type="SpineSkeletonJsonDataResource" id=1]
 [ext_resource path="res://spine4.0/assets/spine_boy/spineboy-pro.atlas" type="SpineAtlasResource" id=2]
@@ -12,16 +12,78 @@ skins = null
 [sub_resource type="SpineAnimationStateDataResource" id=2]
 skeleton = SubResource( 1 )
 
+[sub_resource type="PhysicsMaterial" id=3]
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 604.919, 10 )
+
 [node name="World" type="Node2D"]
 
 [node name="SpineSprite" type="SpineSprite" parent="."]
 position = Vector2( 503.431, 350.604 )
 scale = Vector2( 0.5, 0.5 )
 animation_state_data_res = SubResource( 2 )
-current_animations = [ "walk" ]
+current_animations = [ {
+"animation": "hoverboard",
+"clear": false,
+"empty": false,
+"empty_animation_duration": 0.3,
+"loop": true,
+"track_id": 0
+} ]
+empty_animation_duration = 0.3
 
 [node name="SpineSprite2" type="SpineSprite" parent="."]
 position = Vector2( 259.754, 392.983 )
 scale = Vector2( 0.5, 0.5 )
 animation_state_data_res = SubResource( 2 )
-current_animations = [ "idle" ]
+current_animations = [ {
+"animation": "run",
+"clear": false,
+"empty": false,
+"empty_animation_duration": 0.3,
+"loop": true,
+"track_id": 0
+}, {
+"animation": "aim",
+"clear": false,
+"empty": false,
+"empty_animation_duration": 0.3,
+"loop": true,
+"track_id": 1
+} ]
+
+[node name="Area2D" type="RigidBody2D" parent="."]
+position = Vector2( -97.4706, -322.077 )
+physics_material_override = SubResource( 3 )
+
+[node name="SpineCollisionShapeProxy" type="SpineCollisionShapeProxy" parent="Area2D"]
+position = Vector2( 846.697, 547.664 )
+scale = Vector2( 0.5, 0.5 )
+polygon = PoolVector2Array( -7.75463, -707.658, -144.657, -496.181, -79.657, -374.731, -82.4845, -222.788, -173.381, -28.1422, -56.9128, 54.1097, 153.75, 33.9258, 210.482, -149.395, 189.727, -663.035 )
+spine_sprite_path = NodePath("../SpineSprite3")
+slot = "root_bouding"
+
+[node name="SpineSprite3" type="SpineSprite" parent="Area2D"]
+position = Vector2( 846.697, 547.664 )
+scale = Vector2( 0.5, 0.5 )
+animation_state_data_res = SubResource( 2 )
+process_mode = 1
+current_animations = [ {
+"animation": "walk",
+"clear": false,
+"empty": false,
+"empty_animation_duration": 0.3,
+"loop": true,
+"track_id": 0
+} ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 383.526, 455.569 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 125.017, 139.849 )
+shape = SubResource( 4 )
+
+[connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_Area2D_mouse_entered"]
