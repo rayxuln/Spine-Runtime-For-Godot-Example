@@ -1,0 +1,14 @@
+[remap]
+
+importer="raiix.spine_runtime.atlas"
+type="SpineAtlasResource"
+path="res://.import/skeleton.atlas-106af632353fb1d67fd7a44bb563b400.spatlas"
+
+[deps]
+
+source_file="res://draw_order_test_anim/skeleton.atlas"
+dest_files=[ "res://.import/skeleton.atlas-106af632353fb1d67fd7a44bb563b400.spatlas" ]
+
+[params]
+
+normal_texture_prefix="n"

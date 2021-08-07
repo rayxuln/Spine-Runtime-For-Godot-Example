@@ -1,0 +1,13 @@
+[remap]
+
+importer="raiix.spine_runtime.json"
+type="SpineSkeletonJsonDataResource"
+path="res://.import/owl-pro.json-59a3a19986dcbfa7aa7f28cd8d5d4852.spjson"
+
+[deps]
+
+source_file="res://owl/owl-pro.json"
+dest_files=[ "res://.import/owl-pro.json-59a3a19986dcbfa7aa7f28cd8d5d4852.spjson" ]
+
+[params]
+

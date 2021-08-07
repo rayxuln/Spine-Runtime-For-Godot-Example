@@ -1,0 +1,14 @@
+[remap]
+
+importer="raiix.spine_runtime.atlas"
+type="SpineAtlasResource"
+path="res://.import/owl-pro.atlas-df6ac7e023e2fefae12a9102f3ab9b1d.spatlas"
+
+[deps]
+
+source_file="res://owl/owl-pro.atlas"
+dest_files=[ "res://.import/owl-pro.atlas-df6ac7e023e2fefae12a9102f3ab9b1d.spatlas" ]
+
+[params]
+
+normal_texture_prefix="n"

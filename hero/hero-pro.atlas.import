@@ -1,0 +1,14 @@
+[remap]
+
+importer="raiix.spine_runtime.atlas"
+type="SpineAtlasResource"
+path="res://.import/hero-pro.atlas-75b9ccc63e143ece506d13f2f02c5fd2.spatlas"
+
+[deps]
+
+source_file="res://hero/hero-pro.atlas"
+dest_files=[ "res://.import/hero-pro.atlas-75b9ccc63e143ece506d13f2f02c5fd2.spatlas" ]
+
+[params]
+
+normal_texture_prefix="n"

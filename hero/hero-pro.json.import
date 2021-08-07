@@ -1,0 +1,13 @@
+[remap]
+
+importer="raiix.spine_runtime.json"
+type="SpineSkeletonJsonDataResource"
+path="res://.import/hero-pro.json-0c45d592cf02ab836b6eee04be90b89d.spjson"
+
+[deps]
+
+source_file="res://hero/hero-pro.json"
+dest_files=[ "res://.import/hero-pro.json-0c45d592cf02ab836b6eee04be90b89d.spjson" ]
+
+[params]
+

@@ -1,0 +1,13 @@
+[remap]
+
+importer="raiix.spine_runtime.json"
+type="SpineSkeletonJsonDataResource"
+path="res://.import/skeleton.json-fba48eaf6a1f8baeb9f7c05459938b8e.spjson"
+
+[deps]
+
+source_file="res://draw_order_test_anim/skeleton.json"
+dest_files=[ "res://.import/skeleton.json-fba48eaf6a1f8baeb9f7c05459938b8e.spjson" ]
+
+[params]
+

@@ -1,22 +1,22 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://spine_boy_test1/spineboy-pro.json" type="SpineSkeletonJsonDataResource" id=1]
 [ext_resource path="res://spine_boy_test1/spineboy-pro.atlas" type="SpineAtlasResource" id=2]
 [ext_resource path="res://scenes/SpineBoy.gd" type="Script" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 
-[sub_resource type="SpineSkeletonDataResource" id=20]
+[sub_resource type="SpineSkeletonDataResource" id=1]
 atlas_res = ExtResource( 2 )
 skeleton_json_res = ExtResource( 1 )
-animation_names = [ "aim", "death", "hoverboard", "idle", "idle-turn", "jump", "portal", "run", "run-to-idle", "shoot", "walk" ]
-skin_names = [ "default" ]
+animations = null
+skins = null
 
-[sub_resource type="SpineAnimationStateDataResource" id=21]
-skeleton = SubResource( 20 )
+[sub_resource type="SpineAnimationStateDataResource" id=2]
+skeleton = SubResource( 1 )
 default_mix = 0.2
 
-[sub_resource type="Animation" id=22]
-resource_name = "aim"
+[sub_resource type="Animation" id=3]
+length = 0.15
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpineSprite:current_animations")
 tracks/0/interp = 1
@@ -27,10 +27,19 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ [ "", "aim" ] ]
+"values": [ [ {
+"animation": "aim",
+"clear": false,
+"delay": 0.0,
+"empty": false,
+"empty_animation_duration": true,
+"loop": false,
+"track_id": 1
+} ] ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=4]
+length = 4.9333
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpineSprite:current_animations")
 tracks/0/interp = 1
@@ -41,13 +50,109 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ [ "idle" ] ]
+"values": [ [ {
+"animation": "death",
+"clear": false,
+"delay": 0.0,
+"empty": false,
+"empty_animation_duration": true,
+"loop": true,
+"track_id": 0
+} ] ]
 }
 
-[sub_resource type="Animation" id=24]
-resource_name = "jump"
+[sub_resource type="Animation" id=5]
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpineSprite:current_animations")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ [ {
+"animation": "hoverboard",
+"clear": false,
+"delay": 0.0,
+"empty": false,
+"empty_animation_duration": true,
+"loop": true,
+"track_id": 0
+} ] ]
+}
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=6]
+length = 1.6667
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpineSprite:current_animations")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ [ {
+"animation": "idle",
+"clear": false,
+"delay": 0.0,
+"empty": false,
+"empty_animation_duration": true,
+"loop": true,
+"track_id": 0
+} ] ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.2667
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpineSprite:current_animations")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ [ {
+"animation": "idle-turn",
+"clear": false,
+"delay": 0.0,
+"empty": false,
+"empty_animation_duration": true,
+"loop": true,
+"track_id": 0
+} ] ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 1.3333
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpineSprite:current_animations")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ [ {
+"animation": "jump",
+"clear": false,
+"delay": 0.0,
+"empty": false,
+"empty_animation_duration": true,
+"loop": false,
+"track_id": 1
+} ] ]
+}
+
+[sub_resource type="Animation" id=9]
 resource_name = "not_aim"
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpineSprite:select_track_id")
@@ -74,8 +179,8 @@ tracks/1/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=26]
-resource_name = "portal"
+[sub_resource type="Animation" id=10]
+length = 3.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpineSprite:current_animations")
 tracks/0/interp = 1
@@ -86,10 +191,19 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ [ "portal" ] ]
+"values": [ [ {
+"animation": "portal",
+"clear": false,
+"delay": 0.0,
+"empty": false,
+"empty_animation_duration": true,
+"loop": true,
+"track_id": 0
+} ] ]
 }
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=11]
+length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpineSprite:current_animations")
 tracks/0/interp = 1
@@ -100,49 +214,126 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ [ "run" ] ]
+"values": [ [ {
+"animation": "run",
+"clear": false,
+"delay": 0.0,
+"empty": false,
+"empty_animation_duration": true,
+"loop": true,
+"track_id": 0
+} ] ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=28]
-animation = "idle"
+[sub_resource type="Animation" id=12]
+length = 0.2667
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpineSprite:current_animations")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ [ {
+"animation": "run-to-idle",
+"clear": false,
+"delay": 0.0,
+"empty": false,
+"empty_animation_duration": true,
+"loop": true,
+"track_id": 0
+} ] ]
+}
 
-[sub_resource type="AnimationNodeAnimation" id=29]
-animation = "run"
+[sub_resource type="Animation" id=13]
+length = 0.6333
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpineSprite:current_animations")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ [ {
+"animation": "shoot",
+"clear": false,
+"delay": 0.0,
+"empty": false,
+"empty_animation_duration": true,
+"loop": false,
+"track_id": 2
+} ] ]
+}
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=30]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=31]
-
-[sub_resource type="AnimationNodeStateMachine" id=32]
-states/idle/node = SubResource( 28 )
-states/idle/position = Vector2( 263, 76 )
-states/run/node = SubResource( 29 )
-states/run/position = Vector2( 560, 76 )
-transitions = [ "idle", "run", SubResource( 30 ), "run", "idle", SubResource( 31 ) ]
-start_node = "idle"
-graph_offset = Vector2( -78, -67 )
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=33]
+[sub_resource type="Animation" id=14]
+length = 0.8667
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpineSprite:current_animations")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ [ {
+"animation": "walk",
+"clear": false,
+"delay": 0.0,
+"empty": false,
+"empty_animation_duration": true,
+"loop": true,
+"track_id": 0
+} ] ]
+}
 
 [sub_resource type="AnimationNodeAnimation" id=15]
-animation = "aim"
+animation = "idle"
 
 [sub_resource type="AnimationNodeAnimation" id=16]
-animation = "not_aim"
+animation = "run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=17]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=18]
 
 [sub_resource type="AnimationNodeStateMachine" id=19]
-states/aim/node = SubResource( 15 )
+states/idle/node = SubResource( 15 )
+states/idle/position = Vector2( 263, 76 )
+states/run/node = SubResource( 16 )
+states/run/position = Vector2( 560, 76 )
+transitions = [ "idle", "run", SubResource( 17 ), "run", "idle", SubResource( 18 ) ]
+start_node = "idle"
+graph_offset = Vector2( -78, -67 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=20]
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "aim"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "not_aim"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+
+[sub_resource type="AnimationNodeStateMachine" id=25]
+states/aim/node = SubResource( 21 )
 states/aim/position = Vector2( 228, 74 )
-states/not_aim/node = SubResource( 16 )
+states/not_aim/node = SubResource( 22 )
 states/not_aim/position = Vector2( 453, 90 )
-transitions = [ "aim", "not_aim", SubResource( 17 ), "not_aim", "aim", SubResource( 18 ) ]
+transitions = [ "aim", "not_aim", SubResource( 23 ), "not_aim", "aim", SubResource( 24 ) ]
 start_node = "aim"
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=34]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=26]
 
 [node name="Node2D" type="Node2D"]
 
@@ -152,14 +343,21 @@ script = ExtResource( 3 )
 
 [node name="SpineSprite" type="SpineSprite" parent="SpineBoy"]
 scale = Vector2( 0.3, 0.3 )
-animation_state_data_res = SubResource( 21 )
-select_track_id = 1
-current_animations = [ "", "aim" ]
+animation_state_data_res = SubResource( 2 )
 bind_slot_nodes = [ [ "gun", NodePath("Gun") ], [ "head", NodePath("Gun2") ] ]
+current_animations = [ {
+"animation": "aim",
+"clear": false,
+"delay": 0.0,
+"empty": false,
+"empty_animation_duration": true,
+"loop": false,
+"track_id": 1
+} ]
 
 [node name="Gun" type="Node2D" parent="SpineBoy/SpineSprite"]
-position = Vector2( 55.4672, -371.651 )
-rotation = -0.511615
+position = Vector2( 56.2361, -393.297 )
+rotation = -0.458087
 
 [node name="icon" type="Sprite" parent="SpineBoy/SpineSprite/Gun"]
 position = Vector2( 14.9969, 12.1031 )
@@ -178,8 +376,8 @@ scale = Vector2( 2.88575, 0.878335 )
 texture = ExtResource( 4 )
 
 [node name="Gun2" type="Node2D" parent="SpineBoy/SpineSprite"]
-position = Vector2( -33.3977, -376.668 )
-rotation = -2.089
+position = Vector2( -38.3135, -399.637 )
+rotation = -2.12362
 scale = Vector2( 1, 1 )
 
 [node name="icon" type="Sprite" parent="SpineBoy/SpineSprite/Gun2"]
@@ -198,22 +396,29 @@ scale = Vector2( 2.88575, 0.878335 )
 texture = ExtResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SpineBoy"]
-anims/aim = SubResource( 22 )
-anims/idle = SubResource( 23 )
-anims/jump = SubResource( 24 )
-anims/not_aim = SubResource( 25 )
-anims/portal = SubResource( 26 )
-anims/run = SubResource( 27 )
+anims/aim = SubResource( 3 )
+anims/death = SubResource( 4 )
+anims/hoverboard = SubResource( 5 )
+anims/idle = SubResource( 6 )
+anims/idle-turn = SubResource( 7 )
+anims/jump = SubResource( 8 )
+anims/not_aim = SubResource( 9 )
+anims/portal = SubResource( 10 )
+anims/run = SubResource( 11 )
+anims/run-to-idle = SubResource( 12 )
+anims/shoot = SubResource( 13 )
+anims/walk = SubResource( 14 )
 
 [node name="AnimationTree" type="AnimationTree" parent="SpineBoy"]
-tree_root = SubResource( 32 )
-anim_player = NodePath("../AnimationPlayer")
-active = true
-parameters/playback = SubResource( 33 )
-
-[node name="AnimationTree2" type="AnimationTree" parent="SpineBoy"]
 tree_root = SubResource( 19 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 34 )
+parameters/playback = SubResource( 20 )
+
+[node name="AnimationTree2" type="AnimationTree" parent="SpineBoy"]
+tree_root = SubResource( 25 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 26 )
+
 [connection signal="animation_complete" from="SpineBoy/SpineSprite" to="SpineBoy" method="_on_SpineSprite_animation_complete"]

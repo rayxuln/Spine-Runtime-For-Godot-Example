@@ -23,18 +23,18 @@ func _unhandled_input(event):
 
 		var r = 150
 		entry = $SpineSprite.get_animation_state().get_current(2)
-		if dir.x > r and entry.get_animation().get_anim_name() != "left":
+		if dir.x > r and entry and entry.get_animation().get_anim_name() != "left":
 			entry = $SpineSprite.get_animation_state().set_animation("left", false, 2)
 			entry.set_alpha(abs(dir_n.x))
-		elif dir.x < -r and entry.get_animation().get_anim_name() != "right":
+		elif dir.x < -r and entry and entry.get_animation().get_anim_name() != "right":
 			entry = $SpineSprite.get_animation_state().set_animation("right", false, 2)
 			entry.set_alpha(abs(dir_n.x))
 		
 		entry = $SpineSprite.get_animation_state().get_current(3)
-		if dir.y > r and entry.get_animation().get_anim_name() != "down":
+		if dir.y > r and entry and entry.get_animation().get_anim_name() != "down":
 			entry = $SpineSprite.get_animation_state().set_animation("down", false, 3)
 			entry.set_alpha(abs(dir_n.y))
-		elif dir.y < -r and entry.get_animation().get_anim_name() != "up":
+		elif dir.y < -r and entry and entry.get_animation().get_anim_name() != "up":
 			entry = $SpineSprite.get_animation_state().set_animation("up", false, 3)
 			entry.set_alpha(abs(dir_n.y))
 		

@@ -1,0 +1,13 @@
+[remap]
+
+importer="raiix.spine_runtime.json"
+type="SpineSkeletonJsonDataResource"
+path="res://.import/mix-and-match-pro.json-050365d013d4f8161d5128eca652aaa3.spjson"
+
+[deps]
+
+source_file="res://custom_skin_test/assets/mix-and-match-pro.json"
+dest_files=[ "res://.import/mix-and-match-pro.json-050365d013d4f8161d5128eca652aaa3.spjson" ]
+
+[params]
+
